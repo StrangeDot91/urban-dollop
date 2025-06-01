@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg1h8bpnwu73f"]
+
+[ext_resource type="Texture2D" uid="uid://bhf87fer1bu6u" path="res://sprites/ShopKeeper1.png" id="1_rcdts"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oom1d"]
+atlas = ExtResource("1_rcdts")
+region = Rect2(256, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lx87"]
+atlas = ExtResource("1_rcdts")
+region = Rect2(0, 0, 256, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_svpik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oom1d")
+}],
+"loop": true,
+"name": &"Wave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lx87")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DudeCharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_svpik")
